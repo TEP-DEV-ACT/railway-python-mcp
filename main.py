@@ -14,6 +14,9 @@ def get_greeting(name: str) -> str:
     """Get a personalized greeting"""
     return f"Hello, {name}!"
 
+@mcp.app.get("/favicon.ico")
+async def favicon():
+    return {}
 
 if __name__ == "__main__":
     mcp.run()
